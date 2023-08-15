@@ -101,7 +101,7 @@ if(snake[0].y === food.y  && snake[0].x===food.x){
     hiscr.innerHTML="HIGH SCORE :" + highscorevar;
 } 
 
- let max = 20;
+ let max = 50;
  let min =2;
 food={x:Math.floor(Math.random() * (max - min) ) + min, y:Math.floor(Math.random() * (max - min) ) + min};
 }
