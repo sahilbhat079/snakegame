@@ -7,20 +7,24 @@
 
 
 body{
-    height: 100vh;
+    margin: 20px;
+    height: 90vh;
     background: url(./image/snakbg.jpg);
-    background-size: 120vw 121vh;
+    background-size:120vw 100vh;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
 
 }
 
 #container{
+    position: absolute;
+    right: 40%;
+    margin: 20px;
     background:transparent;
-    height: 90vmin;
-    width: 90vmin;
+    height: 60vmin;
+    width: 60vmin;
     border: 1px solid rgb(5, 5, 5);
     /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
@@ -31,39 +35,45 @@ body{
 }
 
 #score{
-    position: absolute;
-    /* background-color: transparent; */
-    top: 40%;
-    left:8%;
-    margin-bottom: 60px;
+    /* position: absolute; */
+    background-color: transparent;
+    order: 1;
+    top: 6%;
+    right:8%;
+    /* margin-bottom: 60px; */
     font-size: 35px;
     font-weight: 400;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #hiscore{
-    position: absolute;
+    /* position: absolute; */
+    order: 2;
     background-color: transparent;
-    top: 40%;
-    left:8%;
-    font-size: 35px;
-    font-weight: 400;
-    margin-top: 60px;
+    outline: none;
+    top: 4%;
+    right:8%;
+    font-size: 30px;
+    font-weight: 600;
+    /* margin-top: 60px; */
+    /* margin-bottom: 60px; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 #speed{
-    position: absolute;
+    /* position: absolute; */
+  order: 3;
     background-color: transparent;
     top: 10%;
     right:8%;
-    font-size: 35px;
-    font-weight: 400;
-    margin-top: 90px;
+    font-size: 30px;
+    font-weight: 600;
+    /* margin-top:70px; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #mySelect{
-    position: relative;
+    /* position: relative; */
+
     background: transparent;
     font-size: 30px;
     font-weight: 400;
@@ -72,6 +82,19 @@ body{
     border:none ;
     
 }
+
+
+
+
+.speed-box{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+   margin: 10px;
+   height: 200px;
+   width: 300px;
+}
+
 
 
 .head{
@@ -104,5 +127,446 @@ border-radius: 3px;
 
 
 #mySelect option{
-   background:transparent;
+   background:gray;
 }
+
+
+
+
+
+
+
+
+
+
+
+                /* css media phone query */
+
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        margin: 20px;
+        height: 90vh;
+        background: url(./image/snakbg.jpg);
+        background-size:120vw 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        flex-direction: column;    
+    }
+    
+    #container{
+        position: relative;
+        right: 10%;
+        top: 10px;
+        /* position: absolute; */
+        /* left: 0; */
+        /* right: 40%; */
+        margin: 30px;
+        display: flex;
+        background:transparent;
+        height: 50vmin;
+        width: 50vmin;
+        border: 1px solid rgb(5, 5, 5);
+        /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        display: grid;
+        grid-template-rows: repeat(60,1fr);
+        grid-template-columns: repeat(60,1fr);
+    }
+
+    .speed-box{
+        display: flex;
+        flex-direction: column;
+       justify-content: space-between;
+       align-items: start;
+       margin: 10px;
+       height: 100px;
+       width: 300px;
+       position: absolute;
+       left:2%;
+       top: 50%;
+       
+    }
+    #score{
+        /* position: absolute; */
+        background-color: transparent;
+        order: 1;
+        top: 6%;
+        right:8%;
+        /* margin-bottom: 60px; */
+        font-size: 20px;
+        font-weight: 400;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+    #hiscore{
+        /* position: absolute; */
+        order: 2;
+        background-color: transparent;
+        outline: none;
+        top: 4%;
+        right:8%;
+        font-size: 20px;
+        font-weight: 600;
+        /* margin-top: 60px; */
+        /* margin-bottom: 60px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+    #speed{
+        /* position: absolute; */
+      order: 3;
+        background-color: transparent;
+        top: 10%;
+        right:8%;
+        font-size: 20px;
+        font-weight: 600;
+        /* margin-top:70px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #mySelect{
+        /* position: relative; */
+    
+        background: transparent;
+        font-size: 20px;
+        font-weight: 400;
+        height: 100%;
+        outline: none;
+        border:none ;
+        
+    }
+
+
+
+
+    .buttons{
+        /* border: 1px solid black; */
+        height: 150px;
+        width: 150px;
+        position: absolute;
+       left: 25%;
+        top:70%;
+        
+        }
+        
+        
+        
+        .buttons button{
+            width: 40px;
+            height: 40px;
+        
+        }
+        
+        #up{
+            position: absolute;
+            top: 10%;
+            left: 36%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 40px 40px 0 0;
+        }
+        
+        
+        #left{
+            position: absolute;
+            top:40%;
+            left: 4%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 40px 0px 0px 40px;
+        }
+        
+        #right{
+            position: absolute;
+            top:40%;
+            right: 4%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 0px 40px 40px 0;
+        }
+        
+        
+        #down{
+            position: absolute;
+            bottom: 4%;
+            left: 38%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 0px 0px 40px 40px;
+        }
+        
+
+
+
+    
+
+}
+
+
+
+
+
+    /* --------------------------------------tablet css------------------------ */
+
+
+@media only screen and (min-width: 600px) {
+
+    body{
+        margin: 20px;
+        height: 90vh;
+        background: url(./image/snakbg.jpg);
+        background-size:120vw 100vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        flex-direction: column;    
+    }
+    
+    #container{
+        position: relative;
+        right: 10%;
+        top: 10px;
+        /* position: absolute; */
+        /* left: 0; */
+        /* right: 40%; */
+        margin: 30px;
+        display: flex;
+        background:transparent;
+        height: 50vmin;
+        width: 40vmin;
+        border: 1px solid rgb(5, 5, 5);
+        /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        display: grid;
+        grid-template-rows: repeat(60,1fr);
+        grid-template-columns: repeat(60,1fr);
+    }
+
+    .speed-box{
+        display: flex;
+        flex-direction: column;
+       justify-content: space-between;
+       align-items: start;
+       margin: 10px;
+       height: 100px;
+       width: 300px;
+       position: absolute;
+       left:2%;
+       top: 50%;
+       
+    }
+    #score{
+        /* position: absolute; */
+        background-color: transparent;
+        order: 1;
+        top: 6%;
+        right:8%;
+        /* margin-bottom: 60px; */
+        font-size: 20px;
+        font-weight: 400;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+    #hiscore{
+        /* position: absolute; */
+        order: 2;
+        background-color: transparent;
+        outline: none;
+        top: 4%;
+        right:8%;
+        font-size: 20px;
+        font-weight: 600;
+        /* margin-top: 60px; */
+        /* margin-bottom: 60px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+    #speed{
+        /* position: absolute; */
+      order: 3;
+        background-color: transparent;
+        top: 10%;
+        right:8%;
+        font-size: 20px;
+        font-weight: 600;
+        /* margin-top:70px; */
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    #mySelect{
+        /* position: relative; */
+    
+        background: transparent;
+        font-size: 20px;
+        font-weight: 400;
+        height: 100%;
+        outline: none;
+        border:none ;
+        
+    }
+
+
+
+
+    .buttons{
+        /* border: 1px solid black; */
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        left:36%;
+        top:70%;
+        
+        }
+        
+        
+        
+        .buttons button{
+            width: 40px;
+            height: 40px;
+        
+        }
+        
+        #up{
+            position: absolute;
+            top: 10%;
+            left: 36%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 40px 40px 0 0;
+        }
+        
+        
+        #left{
+            position: absolute;
+            top:40%;
+            left: 4%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 40px 0px 0px 40px;
+        }
+        
+        #right{
+            position: absolute;
+            top:40%;
+            right: 4%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 0px 40px 40px 0;
+        }
+        
+        
+        #down{
+            position: absolute;
+            bottom: 4%;
+            left: 38%;
+            background-color: aqua;
+            border: none;
+            outline: none;
+            border-radius: 0px 0px 40px 40px;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              /* -------------------button csss----------------------- */
+
+
+.buttons{
+/* border: 1px solid black; */
+height: 150px;
+width: 150px;
+position: absolute;
+left: 35%;
+top:70%;
+
+}
+
+
+
+.buttons button{
+    width: 40px;
+    height: 40px;
+
+}
+
+#up{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 40px 40px 0 0;
+}
+
+
+#left{
+    position: absolute;
+    top:40%;
+    left: 4%;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 40px 0px 0px 40px;
+}
+
+#right{
+    position: absolute;
+    top:40%;
+    right: 4%;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 0px 40px 40px 0;
+}
+
+
+#down{
+    position: absolute;
+    bottom: 4%;
+    left: 38%;
+    background-color: aqua;
+    border: none;
+    outline: none;
+    border-radius: 0px 0px 40px 40px;
+}
+
+
+

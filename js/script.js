@@ -55,8 +55,6 @@ const music = new Audio('./music.mp3');
 
 function main(currenTime){
     
-     
-   
     /// gameloop is required to render 
     window.requestAnimationFrame(main); 
     if((currenTime-lastrender)/1000 < 1/snakespeed){
@@ -74,7 +72,7 @@ gamestart();
 
 
 function gamestart(){ 
-music.play();
+// music.play();
 //updating the snake array
 //if snake collide 
 if(iscolide(snake)){
@@ -246,3 +244,31 @@ addEventListener('keydown', e =>{
    }
     }
 });
+
+ const up =document.getElementById("up");
+ const left =document.getElementById("left");
+ const right =document.getElementById("right");
+ const down =document.getElementById("down");
+
+
+
+ up.addEventListener("click",()=>{
+    setdirection.x = 0;
+    setdirection.y = -1;
+ });
+
+
+ down.addEventListener("click",()=>{
+    setdirection.x = 0;
+    setdirection.y = 1;
+ });
+
+
+ left.addEventListener("click",()=>{
+    setdirection.x = -1;
+    setdirection.y = 0;
+ });
+ right.addEventListener("click",()=>{
+    setdirection.x = 1;
+    setdirection.y =0;
+ });
