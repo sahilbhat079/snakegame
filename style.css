@@ -23,8 +23,8 @@ body{
     right: 40%;
     margin: 20px;
     background:transparent;
-    height: 60vmin;
-    width: 60vmin;
+    height: 70vmin;
+    width: 70vmin;
     border: 1px solid rgb(5, 5, 5);
     /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
@@ -131,6 +131,22 @@ border-radius: 3px;
 }
 
 
+.play{
+    position: absolute ;
+    height: 120px;
+    width: 120px;
+    right: 30%;
+    top:10%
+
+}
+.play button{
+    background: tan;
+    height: 60px;
+    width: 50px;
+    /* border: none; */
+    outline: none;
+
+}
 
 
 
@@ -144,6 +160,31 @@ border-radius: 3px;
 
 
 @media only screen and (max-width: 600px) {
+
+
+
+
+    .play{
+        position: absolute ;
+        height: 120px;
+        width: 120px;
+        right: 10%;
+        top:10%
+    }
+    .play button{
+        background: tan;
+        height: 60px;
+        width: 50px;
+        /* border: none; */
+        outline: none;
+    
+    }
+    
+
+
+
+
+
 
     body{
         margin: 20px;
@@ -168,7 +209,7 @@ border-radius: 3px;
         display: flex;
         background:transparent;
         height: 50vmin;
-        width: 50vmin;
+        width: 40vmin;
         border: 1px solid rgb(5, 5, 5);
         /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
@@ -296,7 +337,7 @@ border-radius: 3px;
         #down{
             position: absolute;
             bottom: 4%;
-            left: 38%;
+            left: 41%;
             background-color: aqua;
             border: none;
             outline: none;
@@ -318,6 +359,29 @@ border-radius: 3px;
 
 
 @media only screen and (min-width: 600px) {
+
+    .play{
+        position: absolute ;
+        height: 120px;
+        width: 120px;
+        right: 10%;
+        top:10%
+    }
+    .play button{
+        background: tan;
+        height: 60px;
+        width: 50px;
+        /* border: none; */
+        outline: none;
+    
+    }
+
+
+
+
+
+
+
 
     body{
         margin: 20px;
@@ -341,7 +405,7 @@ border-radius: 3px;
         margin: 30px;
         display: flex;
         background:transparent;
-        height: 50vmin;
+        height: 40vmin;
         width: 40vmin;
         border: 1px solid rgb(5, 5, 5);
         /* box-shadow: 0px 0px 10px 10px rgba(87, 235, 92, 0.491); */
@@ -514,8 +578,12 @@ height: 150px;
 width: 150px;
 position: absolute;
 left: 35%;
-top:70%;
+top:60%;
 
+}
+
+.buttons #up:hover, .buttons #down:hover ,.buttons #left:hover, .buttons #right:hover {
+    background-color: antiquewhite;
 }
 
 
@@ -561,7 +629,7 @@ top:70%;
 #down{
     position: absolute;
     bottom: 4%;
-    left: 38%;
+    left: 36%;
     background-color: aqua;
     border: none;
     outline: none;
@@ -570,3 +638,9 @@ top:70%;
 
 
 
+
+
+
+.play button:hover{
+    background-color: aliceblue;
+}

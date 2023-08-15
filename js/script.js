@@ -1,3 +1,8 @@
+//play pause
+const plays =document.getElementById("play");
+ const pauses =document.getElementById("pause");
+//  console.log(plays);
+
 //game focus for speed change
  let gamefocus =true;
 
@@ -72,7 +77,7 @@ gamestart();
 
 
 function gamestart(){ 
-// music.play();
+music.play();
 //updating the snake array
 //if snake collide 
 if(iscolide(snake)){
@@ -213,7 +218,7 @@ if(snakearray[0].x<=0 ||snakearray[0].x>=60 || snakearray[0].y<=0 || snakearray[
 addEventListener('keydown', e =>{
     setdirection = {x:0, y:0};
     move.play();
-    if(gamefocus){
+    if(gamefocus && !paused){
    switch (e.key) {
     case "ArrowUp":
         console.log("up");
@@ -251,7 +256,20 @@ addEventListener('keydown', e =>{
  const down =document.getElementById("down");
 
 
+let paused=false;
+ pauses.addEventListener("click",()=>{
+paused =true;
+console.log(paused);
+ });
 
+
+ plays.addEventListener("click",()=>{
+     paused =false;
+     console.log(paused);
+ });
+
+
+ if(!paused){
  up.addEventListener("click",()=>{
     setdirection.x = 0;
     setdirection.y = -1;
@@ -272,3 +290,4 @@ addEventListener('keydown', e =>{
     setdirection.x = 1;
     setdirection.y =0;
  });
+}
